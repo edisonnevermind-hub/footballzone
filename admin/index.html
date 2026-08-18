@@ -1,81 +1,11 @@
-Skip to content
-edisonnevermind-hub
-footballzone
-Repository navigation
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security and quality
-Insights
-Settings
-Files
-Go to file
-t
-T
-content/news
-index.html
-style.css
-footballzone/admin
-/
-index.html
-in
-main
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>FootballZone CMS</title>
+</head>
 
-Edit
-
-Preview
-Indent mode
-
-Spaces
-Indent size
-
-2
-Line wrap mode
-
-No wrap
-Editing index.html file contents
-  1
-  2
-  3
-  4
-  5
-  6
-  7
-  8
-  9
- 10
- 11
- 12
- 13
- 14
- 15
- 16
- 17
- 18
- 19
- 20
-backend:
-  name: github
-  repo: edisonnevermind-hub/footballzone
-  branch: main
-
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
-
-collections:
-  - name: "news"
-    label: "Football News"
-    folder: "content/news"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Category", name: "category", widget: "string"}
-      - {label: "Featured Image", name: "image", widget: "image", required: false}
-      - {label: "Article", name: "body", widget: "markdown"}
-Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
- New File at / · edisonnevermind-hub/footballzone
+<body>
+  <script src="https://unpkg.com/netlify-cms@2.10.192/dist/netlify-cms.js"></script>
+</body>
+</html>
