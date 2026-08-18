@@ -1,0 +1,14 @@
+{
+  "name": "footballzone",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "dependencies": {
+    "@netlify/database": "^2.0.0",
+    "@netlify/functions": "^6.0.0",
+    "drizzle-orm": "^1.0.0-beta.22"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^1.0.0-beta.22"
+  }
+}
