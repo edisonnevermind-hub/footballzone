@@ -69,6 +69,19 @@ nav a:hover {
   color: #19c37d;
 }
 
+.nav-dashboard {
+  background: #19c37d;
+  color: #04110b !important;
+  padding: 8px 16px;
+  border-radius: 7px;
+  font-weight: 800;
+}
+
+.nav-dashboard:hover {
+  color: #04110b !important;
+  opacity: 0.9;
+}
+
 /* HERO */
 .hero {
   min-height: 570px;
@@ -334,6 +347,19 @@ section:not(.hero):not(.breaking) {
 
 .fixture-time small {
   color: #7a8595;
+}
+
+/* DYNAMIC CONTENT STATES */
+.loading-text,
+.empty-text {
+  grid-column: 1 / -1;
+  color: #667085;
+  font-size: 15px;
+}
+
+.dark-section .empty-text,
+.dark-section .loading-text {
+  color: #9eabbc;
 }
 
 /* RESULTS */

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control Room — FootballZone</title>
+  <meta name="robots" content="noindex">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<header class="cr-header">
+  <div class="cr-brand">
+    <span class="cr-crest">⚽</span>
+    <div>
+      <div class="cr-title">FootballZone</div>
+      <div class="cr-subtitle">Control Room</div>
+    </div>
+  </div>
+  <a href="/" class="cr-back">← Back to site</a>
+</header>
+
+<main class="cr-main">
+
+  <section class="cr-grid">
+
+    <div class="cr-panel">
+      <div class="cr-panel-head">
+        <span class="cr-tag">01 — MATCH CENTRE</span>
+        <h2>Add a fixture</h2>
+      </div>
+
+      <form id="fixture-form" class="cr-form" novalidate>
+        <label>
+          <span>Competition</span>
+          <input type="text" name="competition" placeholder="e.g. Premier League" required>
+        </label>
+
+        <div class="cr-row">
+          <label>
+            <span>Home team</span>
+            <input type="text" name="homeTeam" placeholder="Home side" required>
+          </label>
+          <label>
+            <span>Away team</span>
+            <input type="text" name="awayTeam" placeholder="Away side" required>
+          </label>
+        </div>
+
+        <label>
+          <span>Kick-off</span>
+          <input type="datetime-local" name="matchDate" required>
+        </label>
+
+        <button type="submit" class="cr-submit">Publish fixture</button>
+        <p class="cr-form-message" id="fixture-message" role="status"></p>
+      </form>
+    </div>
+
+    <div class="cr-panel">
+      <div class="cr-panel-head">
+        <span class="cr-tag">02 — NEWSROOM</span>
+        <h2>Add a story</h2>
+      </div>
+
+      <form id="news-form" class="cr-form" novalidate>
+        <label>
+          <span>Headline</span>
+          <input type="text" name="title" placeholder="e.g. Late winner seals derby win" required>
+        </label>
+
+        <div class="cr-row">
+          <label>
+            <span>Category</span>
+            <select name="category">
+              <option value="News">News</option>
+              <option value="Transfers">Transfers</option>
+              <option value="Clubs">Clubs</option>
+              <option value="Leagues">Leagues</option>
+              <option value="Players">Players</option>
+            </select>
+          </label>
+          <label>
+            <span>Byline</span>
+            <input type="text" name="author" placeholder="FootballZone Staff">
+          </label>
+        </div>
+
+        <label>
+          <span>Story</span>
+          <textarea name="excerpt" rows="4" placeholder="A couple of sentences readers will see on the homepage." required></textarea>
+        </label>
+
+        <button type="submit" class="cr-submit">Publish story</button>
+        <p class="cr-form-message" id="news-message" role="status"></p>
+      </form>
+    </div>
+
+  </section>
+
+  <section class="cr-lists">
+
+    <div class="cr-list-block">
+      <div class="cr-panel-head">
+        <span class="cr-tag">LIVE ON SITE</span>
+        <h2>Fixtures</h2>
+      </div>
+      <div class="cr-list" id="fixtures-list">
+        <div class="cr-skeleton"></div>
+        <div class="cr-skeleton"></div>
+      </div>
+    </div>
+
+    <div class="cr-list-block">
+      <div class="cr-panel-head">
+        <span class="cr-tag">LIVE ON SITE</span>
+        <h2>News</h2>
+      </div>
+      <div class="cr-list" id="news-list">
+        <div class="cr-skeleton"></div>
+        <div class="cr-skeleton"></div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
