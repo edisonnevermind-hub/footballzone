@@ -7,131 +7,317 @@
   <title>FootballZone — Edison Gisenyi</title>
 
   <meta name="description"
-        content="FootballZone — Edison Gisenyi euro football contents. Football news, transfers, results and updates.">
+        content="FootballZone — Edison Gisenyi. Football news, transfers, fixtures, results and league updates.">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <div class="logo">⚽ FootballZone — Edison Gisenyi</div>
+<header class="site-header">
+  <div class="logo">⚽ <span>FootballZone</span></div>
+  <div class="brand">Edison Gisenyi</div>
 
   <nav>
     <a href="#home">Home</a>
-    <a href="#latest">Latest News</a>
+    <a href="#latest">News</a>
     <a href="#transfers">Transfers</a>
-    <a href="#matches">Matches</a>
+    <a href="#fixtures">Fixtures</a>
+    <a href="#results">Results</a>
     <a href="#leagues">Leagues</a>
     <a href="#about">About</a>
   </nav>
 </header>
 
 <section class="hero" id="home">
-  <div>
-    <p class="tag">FOOTBALL NEWS</p>
-    <h1>The Home of Football News</h1>
-    <p>FootballZone brings football stories, transfers, match information and league updates together in one place.</p>
-    <a class="button" href="#latest">Read Latest News</a>
+  <div class="hero-content">
+    <span class="tag">⚡ FOOTBALLZONE</span>
+
+    <h1>THE HOME OF<br><strong>FOOTBALL NEWS</strong></h1>
+
+    <p>
+      Latest football news, transfers, fixtures, results and league updates
+      from around the football world.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#latest" class="button">Latest News</a>
+      <a href="#fixtures" class="button secondary">View Fixtures</a>
+    </div>
   </div>
 </section>
 
+<section class="breaking">
+  <strong>BREAKING NEWS</strong>
+  <span>FootballZone — Follow verified football stories and updates.</span>
+</section>
+
 <section id="latest">
-  <h2>Latest News</h2>
+  <div class="section-title">
+    <span>NEWS</span>
+    <h2>Latest Football News</h2>
+    <p>Verified football stories from around the world.</p>
+  </div>
 
-  <div class="grid">
-    <article>
-      <div class="image">⚽</div>
-      <div class="content">
-        <span>NEWS</span>
-        <h3>Verified football stories</h3>
-        <p>Add verified football news here. Always check the source before publishing.</p>
+  <div class="news-grid">
+
+    <article class="news-card featured">
+      <div class="news-image football-image">⚽</div>
+      <div class="news-content">
+        <span class="category">FOOTBALL NEWS</span>
+        <h3>Latest football stories</h3>
+        <p>
+          Add verified football news, club updates and important stories here.
+        </p>
         <small>FootballZone Staff</small>
       </div>
     </article>
 
-    <article>
-      <div class="image">🏆</div>
-      <div class="content">
-        <span>LEAGUES</span>
-        <h3>League updates</h3>
-        <p>Publish verified updates from major football competitions.</p>
+    <article class="news-card">
+      <div class="news-image">🏆</div>
+      <div class="news-content">
+        <span class="category">LEAGUES</span>
+        <h3>Major league updates</h3>
+        <p>
+          Follow important updates from Europe's biggest football competitions.
+        </p>
         <small>FootballZone Staff</small>
       </div>
     </article>
 
-    <article>
-      <div class="image">🔄</div>
-      <div class="content">
-        <span>TRANSFERS</span>
-        <h3>Transfer news</h3>
-        <p>Clearly label transfer stories as CONFIRMED or RUMOUR.</p>
+    <article class="news-card">
+      <div class="news-image">👕</div>
+      <div class="news-content">
+        <span class="category">CLUBS</span>
+        <h3>Club news</h3>
+        <p>
+          Publish verified news about clubs, managers and players.
+        </p>
         <small>FootballZone Staff</small>
       </div>
     </article>
+
   </div>
 </section>
 
 <section id="transfers" class="dark-section">
-  <h2>Transfer News</h2>
 
-  <div class="transfer">
-    <strong>CONFIRMED</strong>
-    <h3>Add a verified transfer here</h3>
-    <p>Source: Add the official club or reliable news source.</p>
+  <div class="section-title">
+    <span>TRANSFER CENTRE</span>
+    <h2>Latest Transfers</h2>
+    <p>Always separate confirmed transfers from rumours.</p>
   </div>
 
-  <div class="transfer rumour">
-    <strong>RUMOUR</strong>
-    <h3>Add a verified transfer rumour here</h3>
-    <p>Clearly identify the source reporting the rumour.</p>
+  <div class="transfer-grid">
+
+    <div class="transfer-card confirmed">
+      <span class="status">✓ CONFIRMED</span>
+      <h3>Confirmed Transfer</h3>
+      <p>Add a confirmed player transfer here.</p>
+      <small>Source: Official club / reliable source</small>
+    </div>
+
+    <div class="transfer-card rumour">
+      <span class="status">? RUMOUR</span>
+      <h3>Transfer Rumour</h3>
+      <p>Add a reported transfer rumour here.</p>
+      <small>Source: Clearly identify the reporting source</small>
+    </div>
+
   </div>
 </section>
 
-<section id="matches">
-  <h2>Match Information</h2>
+<section id="fixtures">
 
-  <div class="matches">
-    <div>
-      <span>RESULT</span>
-      <h3>Add verified result</h3>
-      <p>Competition • Date</p>
-    </div>
-
-    <div>
-      <span>UPCOMING</span>
-      <h3>Add officially scheduled fixture</h3>
-      <p>Competition • Date</p>
-    </div>
+  <div class="section-title">
+    <span>MATCH CENTRE</span>
+    <h2>Upcoming Fixtures</h2>
+    <p>Officially scheduled matches.</p>
   </div>
+
+  <div class="fixture-list">
+
+    <div class="fixture-card">
+      <div>
+        <span class="competition">COMPETITION</span>
+        <h3>Team A <strong>vs</strong> Team B</h3>
+      </div>
+      <div class="fixture-time">
+        <strong>--:--</strong>
+        <small>Date</small>
+      </div>
+    </div>
+
+    <div class="fixture-card">
+      <div>
+        <span class="competition">COMPETITION</span>
+        <h3>Team A <strong>vs</strong> Team B</h3>
+      </div>
+      <div class="fixture-time">
+        <strong>--:--</strong>
+        <small>Date</small>
+      </div>
+    </div>
+
+    <div class="fixture-card">
+      <div>
+        <span class="competition">COMPETITION</span>
+        <h3>Team A <strong>vs</strong> Team B</h3>
+      </div>
+      <div class="fixture-time">
+        <strong>--:--</strong>
+        <small>Date</small>
+      </div>
+    </div>
+
+  </div>
+
 </section>
 
-<section id="leagues" class="dark-section">
-  <h2>Football Leagues</h2>
+<section id="results" class="dark-section">
+
+  <div class="section-title">
+    <span>MATCH CENTRE</span>
+    <h2>Latest Results</h2>
+    <p>Verified completed matches.</p>
+  </div>
+
+  <div class="results-grid">
+
+    <div class="result-card">
+      <span class="competition">COMPETITION</span>
+      <h3>Team A</h3>
+      <div class="score">- : -</div>
+      <h3>Team B</h3>
+      <small>Date</small>
+    </div>
+
+    <div class="result-card">
+      <span class="competition">COMPETITION</span>
+      <h3>Team A</h3>
+      <div class="score">- : -</div>
+      <h3>Team B</h3>
+      <small>Date</small>
+    </div>
+
+    <div class="result-card">
+      <span class="competition">COMPETITION</span>
+      <h3>Team A</h3>
+      <div class="score">- : -</div>
+      <h3>Team B</h3>
+      <small>Date</small>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="leagues">
+
+  <div class="section-title">
+    <span>COMPETITIONS</span>
+    <h2>Football Leagues</h2>
+    <p>Follow the biggest competitions.</p>
+  </div>
 
   <div class="league-grid">
-    <div>🏴 Premier League</div>
-    <div>🏆 Champions League</div>
-    <div>🇪🇸 La Liga</div>
-    <div>🇮🇹 Serie A</div>
-    <div>🇩🇪 Bundesliga</div>
-    <div>🌍 International Football</div>
+
+    <div class="league-card">
+      <span>🏴</span>
+      <h3>Premier League</h3>
+      <p>England</p>
+    </div>
+
+    <div class="league-card">
+      <span>⭐</span>
+      <h3>Champions League</h3>
+      <p>Europe</p>
+    </div>
+
+    <div class="league-card">
+      <span>🇪🇸</span>
+      <h3>La Liga</h3>
+      <p>Spain</p>
+    </div>
+
+    <div class="league-card">
+      <span>🇮🇹</span>
+      <h3>Serie A</h3>
+      <p>Italy</p>
+    </div>
+
+    <div class="league-card">
+      <span>🇩🇪</span>
+      <h3>Bundesliga</h3>
+      <p>Germany</p>
+    </div>
+
+    <div class="league-card">
+      <span>🌍</span>
+      <h3>International</h3>
+      <p>World Football</p>
+    </div>
+
   </div>
+
 </section>
 
-<section id="about">
-  <h2>About FootballZone</h2>
+<section class="search-section">
+
+  <div class="section-title">
+    <span>SEARCH</span>
+    <h2>Find Football Content</h2>
+  </div>
+
+  <input
+    type="search"
+    placeholder="Search football news, clubs, players..."
+    aria-label="Search football content">
+
+</section>
+
+<section id="about" class="about">
+
+  <div class="section-title">
+    <span>ABOUT US</span>
+    <h2>FootballZone — Edison Gisenyi</h2>
+  </div>
+
   <p>
-    FootballZone — Edison Gisenyi is a football news website focused on
-    verified football information, transfers, match information, players,
-    clubs and leagues.
+    FootballZone — Edison Gisenyi is a football news platform focused on
+    football news, transfers, fixtures, results, players, clubs and leagues.
   </p>
+
+  <p>
+    Our goal is to make football information simple, attractive and easy
+    for fans to follow.
+  </p>
+
 </section>
 
 <footer>
-  <div class="logo">⚽ FootballZone — Edison Gisenyi</div>
-  <p>© 2026 FootballZone. All rights reserved.</p>
-  <p>Football news should always be verified before publication.</p>
+
+  <div class="footer-logo">⚽ FootballZone</div>
+
+  <p>Edison Gisenyi</p>
+
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#latest">News</a>
+    <a href="#transfers">Transfers</a>
+    <a href="#fixtures">Fixtures</a>
+    <a href="#results">Results</a>
+    <a href="#about">About</a>
+  </div>
+
+  <p class="copyright">
+    © 2026 FootballZone — Edison Gisenyi. All rights reserved.
+  </p>
+
+  <small>
+    Football information should always be verified before publication.
+  </small>
+
 </footer>
 
 </body>
