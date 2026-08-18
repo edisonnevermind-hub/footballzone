@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: edisonnevermind-hub/footballzone
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "news"
+    label: "Football News"
+    folder: "content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Category", name: "category", widget: "string"}
+      - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Article", name: "body", widget: "markdown"}
