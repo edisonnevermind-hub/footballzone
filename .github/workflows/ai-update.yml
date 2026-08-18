@@ -1,0 +1,29 @@
+name: Football Zone AI Update
+
+on:
+  workflow_dispatch:
+    inputs:
+      feature:
+        description: "Feature to add to Football Zone"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  request-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Football Zone
+        uses: actions/checkout@v4
+
+      - name: Create update request
+        run: |
+          echo "AI update requested:"
+          echo "${{ inputs.feature }}"
+          echo ""
+          echo "This workflow prepares the repository for an AI-generated update."
+          echo "Review changes through a Pull Request before merging."
