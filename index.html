@@ -27,6 +27,11 @@
     <a href="#leagues">Leagues</a>
     <a href="#about">About</a>
   </nav>
+  
+  <div class="refresh-indicator">
+    <span id="refresh-status" class="status-dot"></span>
+    <span id="last-update">Auto-updating...</span>
+  </div>
 </header>
 
 <section class="hero" id="home">
@@ -48,8 +53,8 @@
 </section>
 
 <section class="breaking">
-  <strong>BREAKING NEWS</strong>
-  <span>FootballZone — Follow verified football stories and updates.</span>
+  <strong>LIVE UPDATES</strong>
+  <span id="breaking-text">🔄 Loading live football data...</span>
 </section>
 
 <section id="latest">
@@ -59,44 +64,11 @@
     <p>Verified football stories from around the world.</p>
   </div>
 
-  <div class="news-grid">
-
-    <article class="news-card featured">
-      <div class="news-image football-image">⚽</div>
-      <div class="news-content">
-        <span class="category">FOOTBALL NEWS</span>
-        <h3>Latest football stories</h3>
-        <p>
-          Add verified football news, club updates and important stories here.
-        </p>
-        <small>FootballZone Staff</small>
-      </div>
-    </article>
-
-    <article class="news-card">
-      <div class="news-image">🏆</div>
-      <div class="news-content">
-        <span class="category">LEAGUES</span>
-        <h3>Major league updates</h3>
-        <p>
-          Follow important updates from Europe's biggest football competitions.
-        </p>
-        <small>FootballZone Staff</small>
-      </div>
-    </article>
-
-    <article class="news-card">
-      <div class="news-image">👕</div>
-      <div class="news-content">
-        <span class="category">CLUBS</span>
-        <h3>Club news</h3>
-        <p>
-          Publish verified news about clubs, managers and players.
-        </p>
-        <small>FootballZone Staff</small>
-      </div>
-    </article>
-
+  <div id="news-grid" class="news-grid">
+    <div class="loading-placeholder">
+      <div class="spinner"></div>
+      <p>Loading live football news...</p>
+    </div>
   </div>
 </section>
 
@@ -112,15 +84,15 @@
 
     <div class="transfer-card confirmed">
       <span class="status">✓ CONFIRMED</span>
-      <h3>Confirmed Transfer</h3>
-      <p>Add a confirmed player transfer here.</p>
+      <h3>Transfer Updates</h3>
+      <p>Breaking transfer news and confirmed moves will appear here.</p>
       <small>Source: Official club / reliable source</small>
     </div>
 
     <div class="transfer-card rumour">
       <span class="status">? RUMOUR</span>
-      <h3>Transfer Rumour</h3>
-      <p>Add a reported transfer rumour here.</p>
+      <h3>Transfer Rumours</h3>
+      <p>Latest transfer rumours from verified football sources.</p>
       <small>Source: Clearly identify the reporting source</small>
     </div>
 
@@ -132,44 +104,14 @@
   <div class="section-title">
     <span>MATCH CENTRE</span>
     <h2>Upcoming Fixtures</h2>
-    <p>Officially scheduled matches.</p>
+    <p>Officially scheduled matches - updated in real-time.</p>
   </div>
 
-  <div class="fixture-list">
-
-    <div class="fixture-card">
-      <div>
-        <span class="competition">COMPETITION</span>
-        <h3>Team A <strong>vs</strong> Team B</h3>
-      </div>
-      <div class="fixture-time">
-        <strong>--:--</strong>
-        <small>Date</small>
-      </div>
+  <div id="fixture-list" class="fixture-list">
+    <div class="loading-placeholder">
+      <div class="spinner"></div>
+      <p>Loading upcoming fixtures...</p>
     </div>
-
-    <div class="fixture-card">
-      <div>
-        <span class="competition">COMPETITION</span>
-        <h3>Team A <strong>vs</strong> Team B</h3>
-      </div>
-      <div class="fixture-time">
-        <strong>--:--</strong>
-        <small>Date</small>
-      </div>
-    </div>
-
-    <div class="fixture-card">
-      <div>
-        <span class="competition">COMPETITION</span>
-        <h3>Team A <strong>vs</strong> Team B</h3>
-      </div>
-      <div class="fixture-time">
-        <strong>--:--</strong>
-        <small>Date</small>
-      </div>
-    </div>
-
   </div>
 
 </section>
@@ -179,35 +121,14 @@
   <div class="section-title">
     <span>MATCH CENTRE</span>
     <h2>Latest Results</h2>
-    <p>Verified completed matches.</p>
+    <p>Verified completed matches - live score updates.</p>
   </div>
 
-  <div class="results-grid">
-
-    <div class="result-card">
-      <span class="competition">COMPETITION</span>
-      <h3>Team A</h3>
-      <div class="score">- : -</div>
-      <h3>Team B</h3>
-      <small>Date</small>
+  <div id="results-grid" class="results-grid">
+    <div class="loading-placeholder">
+      <div class="spinner"></div>
+      <p>Loading latest results...</p>
     </div>
-
-    <div class="result-card">
-      <span class="competition">COMPETITION</span>
-      <h3>Team A</h3>
-      <div class="score">- : -</div>
-      <h3>Team B</h3>
-      <small>Date</small>
-    </div>
-
-    <div class="result-card">
-      <span class="competition">COMPETITION</span>
-      <h3>Team A</h3>
-      <div class="score">- : -</div>
-      <h3>Team B</h3>
-      <small>Date</small>
-    </div>
-
   </div>
 
 </section>
@@ -217,42 +138,42 @@
   <div class="section-title">
     <span>COMPETITIONS</span>
     <h2>Football Leagues</h2>
-    <p>Follow the biggest competitions.</p>
+    <p>Follow the biggest competitions with live standings.</p>
   </div>
 
   <div class="league-grid">
 
-    <div class="league-card">
+    <div class="league-card" data-league="PL">
       <span>🏴</span>
       <h3>Premier League</h3>
       <p>England</p>
     </div>
 
-    <div class="league-card">
+    <div class="league-card" data-league="CL">
       <span>⭐</span>
       <h3>Champions League</h3>
       <p>Europe</p>
     </div>
 
-    <div class="league-card">
+    <div class="league-card" data-league="LA">
       <span>🇪🇸</span>
       <h3>La Liga</h3>
       <p>Spain</p>
     </div>
 
-    <div class="league-card">
+    <div class="league-card" data-league="SA">
       <span>🇮🇹</span>
       <h3>Serie A</h3>
       <p>Italy</p>
     </div>
 
-    <div class="league-card">
+    <div class="league-card" data-league="BL1">
       <span>🇩🇪</span>
       <h3>Bundesliga</h3>
       <p>Germany</p>
     </div>
 
-    <div class="league-card">
+    <div class="league-card" data-league="WC">
       <span>🌍</span>
       <h3>International</h3>
       <p>World Football</p>
@@ -271,6 +192,7 @@
 
   <input
     type="search"
+    id="search-input"
     placeholder="Search football news, clubs, players..."
     aria-label="Search football content">
 
@@ -290,7 +212,13 @@
 
   <p>
     Our goal is to make football information simple, attractive and easy
-    for fans to follow.
+    for fans to follow. All data is pulled live from verified football APIs
+    and updated automatically in real-time.
+  </p>
+
+  <p>
+    <strong>Live Updates:</strong> This site automatically refreshes every 60 seconds
+    to bring you the latest fixtures, results, and football news.
   </p>
 
 </section>
@@ -316,9 +244,12 @@
 
   <small>
     Football information should always be verified before publication.
+    Live data provided by Football-Data.org API.
   </small>
 
 </footer>
+
+<script src="app.js"></script>
 
 </body>
 </html>
